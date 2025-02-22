@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<title>Stephen Jackiw:Web Developer</title>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .socials {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            bottom: 0px;
+            right: 32px;
+            left: auto;
+            z-index: 10;
+            width: 32px;
+        }
+
+        h1 {
+            font-family: "Italiana", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 4rem;
+        }
+
+        .Hero {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .heroCenterCollection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+        }
+
+        .centerCircle {
+            background-color: white;
+            color: #00000000;
+            justify-self: center;
+            align-self: center;
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            animation: float 3s ease-in-out infinite;
+            transition: height 250ms, width 250ms;
+        }
+
+        .centerCircle:hover {
+            text-align: center;
+            vertical-align: middle;
+            color: black;
+            height: 100px;
+            width: 100px;
+            animation: float 3s ease infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+        .circleContainer {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrowContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #181818;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: pointDown 12s ease infinite;
+        }
+
+        @keyframes pointDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            2% {
+                transform: translateY(5px);
+            }
+
+            4% {
+                transform: translateY(0);
+            }
+
+            6% {
+                transform: translateY(5px);
+            }
+
+            8% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+        .Section {
+            padding: 2rem;
+            padding-bottom: 10rem;
+            display: flex;
+            flex-direction: row;
+            margin: 2rem;
+            /* border-style: dashed; */
+            width: 50%;
+            min-width: 650px;
+            align-self: center;
+            overflow: scroll;
+        }
+
+        .ExpCardContainer {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+        }
+
+        .ExpCard {
+            padding: 1.5rem;
+            padding-top: .5rem;
+            border-radius: 25px;
+            border-width: 2px;
+            border-color: #ce1212;
+            border-style: solid;
+        }
+
+        .ExpCard .pictureContainer {
+            width: 256px;
+            height: 256px;
+            border-width: 2px;
+            border-color: #ce1212;
+            border-style: solid;
+            margin-bottom: 2.5rem;
+        }
+
+        .aboutTextContainerBody {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 450px;
+        }
+
+        .ContactMe {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ExpPText {
+            width: 25%;
+        }
+
+        .socialLinkContainer {
+            height: 48px;
+            width: 48px;
+        }
+
+        .socialLinkContainer :hover {
+            color: #ce1212;
+        }
+
+        .line{
+            border-style: solid;
+            border-width: 1px;
+            height: 250px;
+            width: 0px;
+        }
+    </style>
+</head>
+
+<body class="parent">
+    <div class="socials">
+        <div class="socialLinkContainer">
+            <div class="socialLink">Resume</div>
+        </div>
+        <div class="socialLinkContainer">
+            <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                class="h-6 w-6" aria-hidden="true">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </div>
+        <div class="socialLinkContainer">
+            <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="h-6 w-6" aria-hidden="true">
+                <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                </path>
+            </svg>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="Hero">
+        <div class="heroCenterCollection">
+            <h1>Stephen Jackiw</h1>
+            <div class="circleContainer">
+                <div class="centerCircle">
+                    <p>Click me!</p>
+                </div>
+            </div>
+            <h2>Web Developer</h2>
+            <div class="arrowContainer">
+                <h3 class="arrow">╲╱</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="Section">
+        <div class="AboutTextContainer">
+            <h1 class="aboutHeaderText">I create <span style="color:#ce1212">web applications</span></h1>
+            <div class="aboutTextContainerBody">
+                <p class="aboutBodyText">Hi. I create and design web applications and video games. I like to focus on
+                    simple designs that are accesssible and engaging but not distracting. Performance is a key focus of
+                    mine, that I believe goes beyond just run-time; applications on the web should be fast and
+                    user-focused.
+                </p>
+                <p class="aboutBodyText">
+                    <!--TODO: Add links to each of these so users can see what I mean-->
+                    In my spare time you can find my rock climbing, prototyping new app ideas, watching movies, painting, learning Spanish or working on my
+                    video game (Release: April 2025)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="ExpContainer">
+            <h1>Project/Experience</h1>
+            <p class="ExpPText">Here is a catalog of all of my projects and experience. At the moment it is unfiltered
+                (so you get the
+                pleasure of seeing my art AND my professional projects). If you are looking for the complete catalog in
+                a searchable format, click <span style="color:#ce1212">here</span>.</p>
+            <div class="ExpCardContainer">
+                <div class="ExpCard">
+                    <h3>Is it okay to be scared of the dark?</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
+                    </p>
+                </div>
+                <div class="ExpCard">
+                    <h3>Tablebitz</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A brief project that allows users to rapidly build a 3D tabletop combat map for Roleplaying games
+                        like DnD and Pathfinder</p>
+                </div>
+                <div class="ExpCard">
+                    <h3>JP Morgan Chase</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>Currently developing and modernizing the way the coporation process Credit Card and Lending data,
+                        including the automation of legal requirements and retrying stale requests.</p>
+                </div>
+                <div class="ExpCard">
+                    <h3>Ford Motor Company</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>Developed solutions to automate scanning for vulnerabilities in open-source components used in
+                        executable files found in vehicles</p>
+                </div>
+                <div class="ExpCard">
+                    <h3>The Polaroid Project (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A collection of roughly 30 watercolor paintings in a polaroid format that were then distorted
+                        using custom code and filters from the binary data in common social media applications.</p>
+                </div>
+                <div class="ExpCard">
+                    <h3>Alphabet Superset(In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A collection of ink drawings of trees native to North America, loosely following the Alphabet as
+                        inspired by Strutheless</p>
+                </div>
+                <div class="ExpCard">
+                    <h3>Inktober 2024</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>At the time, I had been working exlusively in ink and was a little sick of it so I did my
+                        "inktober" in oil paint. For some reason I was feeling exceptionally spooky so I just made
+                        skulls. I finished with 12 paintings, and a handfull of drawings in various styles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="ContactMe">
+            <h1>Want to work with me?</h1>
+            <p>Interested in my work? Join my mailing list. It is the best way to follow what I am working on. I send
+                something MAYBE once a week so you dont have to worry about your inbox being flooded with spam. </p>
+            <div>NEWLETTER SIGNUP WIDGET</div>
+            <p>Want to collaborate on something? Need a website or want to see your project come to fruition? Feel free
+                to
+                contact me with your budget and what you need and I'll contact you with next steps.</p>
+            <div>FREELANCE WIDGET</div>
+            <p>Interested in hiring me full time? You can find my resume here.</p>
+            <button type="button">Download Resume</button>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
