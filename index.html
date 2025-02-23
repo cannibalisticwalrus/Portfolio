@@ -134,7 +134,7 @@
             width: 50%;
             min-width: 650px;
             align-self: center;
-            overflow: scroll;
+            overflow:auto;
         }
 
         .ExpCardContainer {
@@ -204,6 +204,27 @@
             height: 250px;
             width: 0px;
         }
+
+        .ExpContainer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .TabContainer{
+            border-style: solid;
+            border-color: #ffffff;
+            padding: 2rem;
+        }
+
+        .Tab{
+            border-color: #ffffff;
+            border-style: solid;
+            border-radius: 5%;
+            background-color: #000000;
+            color: #ffffff;
+            width: 50%;
+            height:2rem;
+        }
     </style>
 </head>
 
@@ -266,9 +287,9 @@
     </div>
     <div class="Section">
         <div class="ExpContainer">
-            <div class="tabContainer">
-                <button class="tab" onclick="toggleExpEdu()">Experience</button>
-                <button class="tab" onclick="toggleExpEdu()">Education</button>
+            <div class="TabContainer">
+                <button class="Tab" onclick="toggleExpEdu()">Experience</button>
+                <button class="Tab" onclick="toggleExpEdu()">Education</button>
                 <!--Experience.  Only display when exp is active-->
                 <div class="ExperienceEducationItemsContainer">
                     <div class="ExperienceItemContainer">
@@ -329,39 +350,38 @@
                 </div>
 
             </div>
+            <div class="ExpCardContainer">
+                <div class="ExpCard">
+                    <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
+                    </p>
+                    <div>Tech Used: GDScript, Game Dev, Godot, C#
+                    </div>
+                </div>
+                <div class="ExpCard">
+                    <h3>The Polaroid Project (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
+                    <div>Tech Used: Typescript, React, Python, AWS Lamda
+                    </div>
+                </div>
+                <div class="ExpCard">
+                    <h3>Watched Movie Tracker (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A small project to keep track of and review all of the movies I have watched.</p>
+                    <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
+                    </div>
+                </div>
+                <div class="ExpCard">
+                    <h3>Booked (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
+                    <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="ExpCardContainer">
-            <div class="ExpCard">
-                <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
-                </p>
-                <div>Tech Used: GDScript, Game Dev, Godot, C#
-                </div>
-            </div>
-            <div class="ExpCard">
-                <h3>The Polaroid Project (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
-                <div>Tech Used: Typescript, React, Python, AWS Lamda
-                </div>
-            </div>
-            <div class="ExpCard">
-                <h3>Watched Movie Tracker (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A small project to keep track of and review all of the movies I have watched.</p>
-                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
-                </div>
-            </div>
-            <div class="ExpCard">
-                <h3>Booked (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
-                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     <div class="Section">
         <div class="ContactMe">
