@@ -11,17 +11,12 @@
         }
 
         .socials {
-            position: fixed;
+            /*            position: fixed;
+*/
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
+            flex-direction: row;
+            gap: .2rem;
             padding: 2rem;
-            bottom: 0px;
-            right: 32px;
-            left: auto;
-            z-index: 10;
-            width: 32px;
         }
 
         h1 {
@@ -170,7 +165,6 @@
         .aboutTextContainerBody {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
             width: 450px;
         }
 
@@ -184,6 +178,12 @@
             flex-direction: column;
         }
 
+        .TechUsedContainer {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
         .ExpPText {
             width: 25%;
         }
@@ -191,13 +191,14 @@
         .socialLinkContainer {
             height: 48px;
             width: 48px;
+            padding: 1rem;
         }
 
         .socialLinkContainer :hover {
             color: #ce1212;
         }
 
-        .line{
+        .line {
             border-style: solid;
             border-width: 1px;
             height: 250px;
@@ -207,32 +208,10 @@
 </head>
 
 <body class="parent">
-    <div class="socials">
-        <div class="socialLinkContainer">
-            <div class="socialLink">Resume</div>
-        </div>
-        <div class="socialLinkContainer">
-            <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                class="h-6 w-6" aria-hidden="true">
-                <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-                </path>
-            </svg>
-        </div>
-        <div class="socialLinkContainer">
-            <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="h-6 w-6" aria-hidden="true">
-                <path
-                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
-                </path>
-            </svg>
-        </div>
-        <div class="line"></div>
-    </div>
     <div class="Hero">
         <div class="heroCenterCollection">
             <h1>Stephen Jackiw</h1>
-            <div class="circleContainer">
+            <div onclick="changeTheme()" class="circleContainer">
                 <div class="centerCircle">
                     <p>Click me!</p>
                 </div>
@@ -246,90 +225,194 @@
     </div>
     <div class="Section">
         <div class="AboutTextContainer">
-            <h1 class="aboutHeaderText">I create <span style="color:#ce1212">web applications</span></h1>
+            <h1 class="aboutHeaderText">Hi, I am <span style="color:#ce1212">Stephen Jackiw</span></h1>
             <div class="aboutTextContainerBody">
-                <p class="aboutBodyText">Hi. I create and design web applications and video games. I like to focus on
-                    simple designs that are accesssible and engaging but not distracting. Performance is a key focus of
-                    mine, that I believe goes beyond just run-time; applications on the web should be fast and
-                    user-focused.
+                <p class="aboutBodyText">Hi. I am a software engineer based out of Philadelphia, USA.
                 </p>
                 <p class="aboutBodyText">
                     <!--TODO: Add links to each of these so users can see what I mean-->
-                    In my spare time you can find my rock climbing, prototyping new app ideas, watching movies, painting, learning Spanish or working on my
-                    video game (Release: April 2025)
+                    I love rock climbing, prototyping app ideas, watching movies, and painting.
                 </p>
+            </div>
+            <div class="socials">
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewbox="0, 0 24, 24" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M 6 2 C 4.9057453 2 4 2.9057453 4 4 L 4 20 C 4 21.094255 4.9057453 22 6 22 L 18 22 C 19.094255 22 20 21.094255 20 20 L 20 8 L 14 2 L 6 2 z M 6 4 L 13 4 L 13 9 L 18 9 L 18 20 L 6 20 L 6 4 z M 8 12 L 8 14 L 16 14 L 16 12 L 8 12 z M 8 16 L 8 18 L 16 18 L 16 16 L 8 16 z">
+
+                        </path>
+                    </svg>
+                </div>
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                        </path>
+                    </svg>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="Section">
         <div class="ExpContainer">
-            <h1>Project/Experience</h1>
-            <p class="ExpPText">Here is a catalog of all of my projects and experience. At the moment it is unfiltered
-                (so you get the
-                pleasure of seeing my art AND my professional projects). If you are looking for the complete catalog in
-                a searchable format, click <span style="color:#ce1212">here</span>.</p>
-            <div class="ExpCardContainer">
-                <div class="ExpCard">
-                    <h3>Is it okay to be scared of the dark?</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
-                    </p>
+            <div class="tabContainer">
+                <button class="tab" onclick="toggleExpEdu()">Experience</button>
+                <button class="tab" onclick="toggleExpEdu()">Education</button>
+                <!--Experience.  Only display when exp is active-->
+                <div class="ExperienceEducationItemsContainer">
+                    <div class="ExperienceItemContainer">
+                        <h3>JP Morgan Chase</h3>
+                        <h4>Software Engineer II | June 2023 – Present</h4>
+                        <ul>
+                            <li>Developed software solutions using Java SpringBoot, AWS RDBS, AWS SQS and Kafka to
+                                automate
+                                sending letters to customers who have changes in their credit application status</li>
+                            <li>Developed a system-wide retry mechanism using AWS Lambda to reprocess failed requests
+                            </li>
+                            <li>Provided on-call support for production and testing issues for all applications in the
+                                credit and consumer business space</li>
+                            <li>Modernized application by redeveloping systems on proprietary architecture to the AWS
+                                ecosystem</li>
+                            <li>Maintained Unit and Integration tests using JUnit and Cucumber</li>
+                        </ul>
+                        <div class="TechUsedContainer">Tech Used:
+                            <div class="TechItem">Java</div>
+                            <div class="TechItem">AWS</div>
+                            <div class="TechItem">SQL</div>
+                        </div>
+                    </div>
+                    <div class="ExperienceItemContainer">
+                        <h3>Ford Motor Company</h3>
+                        <h4>Junior Software Engineer | May 2021 – August 2022</h4>
+                        <ul>
+                            <li>Developed software solutions in Java SpringBoot, Angular 8 and MS SQL for the automated
+                                vulnerability scanning of binary files in an agile and extreme programming environment
+                            </li>
+                            <li> Normalized an SQL database and wrote SQL queries for a mission-critical system</li>
+                            <li>Worked with Jenkins Pipelines to create a blue-green deploy system, automated static
+                                code
+                                analysis and automated binary scan analysis for a CI/CD pipeline.</li>
+                            <li>Managed project backlog using Jira and Github</li>
+                            <li>Worked with AWS S3 to save data for long-term storage</li>
+                            <li>Initiated the switch from PCF to Google Cloud Platform for our entire system</li>
+                            <li>Maintained Unit and Integrations tests using JUnit(Java) and Jasmine(Angular)</li>
+                        </ul>
+                        <div class="TechUsedContainer">Tech Used:
+                            <div class="TechItem">Java</div>
+                            <div class="TechItem">JavaScript/TypeScript</div>
+                            <div class="TechItem">Google Cloud</div>
+                            <div class="TechItem">SQL</div>
+                            <div class="TechItem">Angular</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ExpCard">
-                    <h3>Tablebitz</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A brief project that allows users to rapidly build a 3D tabletop combat map for Roleplaying games
-                        like DnD and Pathfinder</p>
+
+                <!--Education.  Only display when education is active-->
+                <div class="ExperienceEducationItemsContainer">
+                    <div class="EducationItemContainer">
+                        <h4>Purdue University</h4>
+                        <p>– BS, Cybersecurity – Graduated Honors – GPA 3.7</p>
+                        <h4>Certifications</h4>
+                        <p>– AWS Developer Associate, CompTIA Security+, AWS Cloud Practitioner</p>
+                    </div>
                 </div>
-                <div class="ExpCard">
-                    <h3>JP Morgan Chase</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>Currently developing and modernizing the way the coporation process Credit Card and Lending data,
-                        including the automation of legal requirements and retrying stale requests.</p>
+
+            </div>
+        </div>
+        <div class="ExpCardContainer">
+            <div class="ExpCard">
+                <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
+                </p>
+                <div>Tech Used: GDScript, Game Dev, Godot, C#
                 </div>
-                <div class="ExpCard">
-                    <h3>Ford Motor Company</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>Developed solutions to automate scanning for vulnerabilities in open-source components used in
-                        executable files found in vehicles</p>
+            </div>
+            <div class="ExpCard">
+                <h3>The Polaroid Project (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
+                <div>Tech Used: Typescript, React, Python, AWS Lamda
                 </div>
-                <div class="ExpCard">
-                    <h3>The Polaroid Project (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A collection of roughly 30 watercolor paintings in a polaroid format that were then distorted
-                        using custom code and filters from the binary data in common social media applications.</p>
+            </div>
+            <div class="ExpCard">
+                <h3>Watched Movie Tracker (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A small project to keep track of and review all of the movies I have watched.</p>
+                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
                 </div>
-                <div class="ExpCard">
-                    <h3>Alphabet Superset(In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A collection of ink drawings of trees native to North America, loosely following the Alphabet as
-                        inspired by Strutheless</p>
-                </div>
-                <div class="ExpCard">
-                    <h3>Inktober 2024</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>At the time, I had been working exlusively in ink and was a little sick of it so I did my
-                        "inktober" in oil paint. For some reason I was feeling exceptionally spooky so I just made
-                        skulls. I finished with 12 paintings, and a handfull of drawings in various styles.</p>
+            </div>
+            <div class="ExpCard">
+                <h3>Booked (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
+                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <div class="Section">
         <div class="ContactMe">
             <h1>Want to work with me?</h1>
-            <p>Interested in my work? Join my mailing list. It is the best way to follow what I am working on. I send
-                something MAYBE once a week so you dont have to worry about your inbox being flooded with spam. </p>
-            <div>NEWLETTER SIGNUP WIDGET</div>
-            <p>Want to collaborate on something? Need a website or want to see your project come to fruition? Feel free
-                to
-                contact me with your budget and what you need and I'll contact you with next steps.</p>
-            <div>FREELANCE WIDGET</div>
             <p>Interested in hiring me full time? You can find my resume here.</p>
             <button type="button">Download Resume</button>
+            <p>Or you can drop me a message if you just want to chat</p>
+            <textarea></textarea>
         </div>
 
     </div>
+    <script>
+        function changeTheme() {
+            console.log("Theme Change Requested");
+        }
+
+        let expedu = true; //True:hide experience and show edu, False:hide edu and show exp
+        const experienceElements = document.getElementsByClassName("ExperienceItemContainer");
+        const educationElements = document.getElementsByClassName("EducationItemContainer");
+
+        function toggleExpEdu() {
+            expedu = !expedu;
+            //TODO: Replace with show/hide experience/education logic
+            let logString = "";
+            if (expedu) {
+                for (i = 0; i < experienceElements.length; i++) {
+                    experienceElements[i].style.visibility = "hidden";
+                    experienceElements[i].style.display = "none";
+                }
+                for (i = 0; i < educationElements.length; i++) {
+                    educationElements[i].style.visibility = "visible";
+                    educationElements[i].style.display = "inherit";
+
+                }
+                logString = "Experience";
+            } else {
+                logString = "Education";
+                for (i = 0; i < experienceElements.length; i++) {
+                    experienceElements[i].style.visibility = "visible";
+                    experienceElements[i].style.display = "inherit";
+
+                }
+                for (i = 0; i < educationElements.length; i++) {
+                    educationElements[i].style.visibility = "hidden";
+                    educationElements[i].style.display = "none";
+
+                }
+            }
+            console.log("You toggled Experience/Education.  You are viewing: " + logString);
+        }
+    </script>
 </body>
 
 
