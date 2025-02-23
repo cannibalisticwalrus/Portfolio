@@ -134,7 +134,7 @@
             width: 50%;
             min-width: 650px;
             align-self: center;
-            overflow:auto;
+            overflow: auto;
         }
 
         .ExpCardContainer {
@@ -208,22 +208,28 @@
         .ExpContainer {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
 
-        .TabContainer{
-            border-style: solid;
-            border-color: #ffffff;
-            padding: 2rem;
+        .TabContainer {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
         }
 
-        .Tab{
+        .Tab {
             border-color: #ffffff;
             border-style: solid;
-            border-radius: 5%;
             background-color: #000000;
             color: #ffffff;
+            height: 4rem;
             width: 50%;
-            height:2rem;
+        }
+        .TechItem{
+            background-color: #ce1212;
+            color: #ffffff;
+            padding: .25rem 1rem .25rem 1rem;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -290,95 +296,100 @@
             <div class="TabContainer">
                 <button class="Tab" onclick="toggleExpEdu()">Experience</button>
                 <button class="Tab" onclick="toggleExpEdu()">Education</button>
-                <!--Experience.  Only display when exp is active-->
-                <div class="ExperienceEducationItemsContainer">
-                    <div class="ExperienceItemContainer">
-                        <h3>JP Morgan Chase</h3>
-                        <h4>Software Engineer II | June 2023 – Present</h4>
-                        <ul>
-                            <li>Developed software solutions using Java SpringBoot, AWS RDBS, AWS SQS and Kafka to
-                                automate
-                                sending letters to customers who have changes in their credit application status</li>
-                            <li>Developed a system-wide retry mechanism using AWS Lambda to reprocess failed requests
-                            </li>
-                            <li>Provided on-call support for production and testing issues for all applications in the
-                                credit and consumer business space</li>
-                            <li>Modernized application by redeveloping systems on proprietary architecture to the AWS
-                                ecosystem</li>
-                            <li>Maintained Unit and Integration tests using JUnit and Cucumber</li>
-                        </ul>
-                        <div class="TechUsedContainer">Tech Used:
-                            <div class="TechItem">Java</div>
-                            <div class="TechItem">AWS</div>
-                            <div class="TechItem">SQL</div>
-                        </div>
-                    </div>
-                    <div class="ExperienceItemContainer">
-                        <h3>Ford Motor Company</h3>
-                        <h4>Junior Software Engineer | May 2021 – August 2022</h4>
-                        <ul>
-                            <li>Developed software solutions in Java SpringBoot, Angular 8 and MS SQL for the automated
-                                vulnerability scanning of binary files in an agile and extreme programming environment
-                            </li>
-                            <li> Normalized an SQL database and wrote SQL queries for a mission-critical system</li>
-                            <li>Worked with Jenkins Pipelines to create a blue-green deploy system, automated static
-                                code
-                                analysis and automated binary scan analysis for a CI/CD pipeline.</li>
-                            <li>Managed project backlog using Jira and Github</li>
-                            <li>Worked with AWS S3 to save data for long-term storage</li>
-                            <li>Initiated the switch from PCF to Google Cloud Platform for our entire system</li>
-                            <li>Maintained Unit and Integrations tests using JUnit(Java) and Jasmine(Angular)</li>
-                        </ul>
-                        <div class="TechUsedContainer">Tech Used:
-                            <div class="TechItem">Java</div>
-                            <div class="TechItem">JavaScript/TypeScript</div>
-                            <div class="TechItem">Google Cloud</div>
-                            <div class="TechItem">SQL</div>
-                            <div class="TechItem">Angular</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Education.  Only display when education is active-->
-                <div class="ExperienceEducationItemsContainer">
-                    <div class="EducationItemContainer">
-                        <h4>Purdue University</h4>
-                        <p>– BS, Cybersecurity – Graduated Honors – GPA 3.7</p>
-                        <h4>Certifications</h4>
-                        <p>– AWS Developer Associate, CompTIA Security+, AWS Cloud Practitioner</p>
-                    </div>
-                </div>
-
             </div>
-            <div class="ExpCardContainer">
-                <div class="ExpCard">
-                    <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
-                    </p>
-                    <div>Tech Used: GDScript, Game Dev, Godot, C#
+            <!--Experience.  Only display when exp is active-->
+            <div class="ExperienceEducationItemsContainer">
+                <div class="ExperienceItemContainer">
+                    <h3>JP Morgan Chase</h3>
+                    <h4>Software Engineer II | June 2023 – Present</h4>
+                    <ul>
+                        <li>Developed software solutions using Java SpringBoot, AWS RDBS, AWS SQS and Kafka to
+                            automate
+                            sending letters to customers who have changes in their credit application status</li>
+                        <li>Developed a system-wide retry mechanism using AWS Lambda to reprocess failed requests
+                        </li>
+                        <li>Provided on-call support for production and testing issues for all applications in the
+                            credit and consumer business space</li>
+                        <li>Modernized application by redeveloping systems on proprietary architecture to the AWS
+                            ecosystem</li>
+                        <li>Maintained Unit and Integration tests using JUnit and Cucumber</li>
+                    </ul>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem">Java</div>
+                        <div class="TechItem">AWS</div>
+                        <div class="TechItem">SQL</div>
                     </div>
                 </div>
-                <div class="ExpCard">
-                    <h3>The Polaroid Project (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
-                    <div>Tech Used: Typescript, React, Python, AWS Lamda
+                <div class="ExperienceItemContainer">
+                    <h3>Ford Motor Company</h3>
+                    <h4>Junior Software Engineer | May 2021 – August 2022</h4>
+                    <ul>
+                        <li>Developed software solutions in Java SpringBoot, Angular 8 and MS SQL for the automated
+                            vulnerability scanning of binary files in an agile and extreme programming environment
+                        </li>
+                        <li> Normalized an SQL database and wrote SQL queries for a mission-critical system</li>
+                        <li>Worked with Jenkins Pipelines to create a blue-green deploy system, automated static
+                            code
+                            analysis and automated binary scan analysis for a CI/CD pipeline.</li>
+                        <li>Managed project backlog using Jira and Github</li>
+                        <li>Worked with AWS S3 to save data for long-term storage</li>
+                        <li>Initiated the switch from PCF to Google Cloud Platform for our entire system</li>
+                        <li>Maintained Unit and Integrations tests using JUnit(Java) and Jasmine(Angular)</li>
+                    </ul>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem">Java</div>
+                        <div class="TechItem">JavaScript/TypeScript</div>
+                        <div class="TechItem">Google Cloud</div>
+                        <div class="TechItem">SQL</div>
+                        <div class="TechItem">Angular</div>
                     </div>
                 </div>
-                <div class="ExpCard">
-                    <h3>Watched Movie Tracker (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A small project to keep track of and review all of the movies I have watched.</p>
-                    <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
-                    </div>
+            </div>
+
+            <!--Education.  Only display when education is active-->
+            <div class="ExperienceEducationItemsContainer">
+                <div class="EducationItemContainer">
+                    <h3>Purdue University</h3>
+                    <p>– BS, Cybersecurity – Graduated Honors – GPA 3.7</p>
+                    <h3>Certifications</h3>
+                     <ul>
+                        <li>AWS Developer Associate</li>
+                        <li>CompTIA Security+</li>
+                        <li>AWS Cloud Practitioner</li>
+                     </ul>
                 </div>
-                <div class="ExpCard">
-                    <h3>Booked (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
-                    <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
-                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="ExpCardContainer">
+            <div class="ExpCard">
+                <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
+                </p>
+                <div>Tech Used: GDScript, Game Dev, Godot, C#
+                </div>
+            </div>
+            <div class="ExpCard">
+                <h3>The Polaroid Project (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
+                <div>Tech Used: Typescript, React, Python, AWS Lamda
+                </div>
+            </div>
+            <div class="ExpCard">
+                <h3>Watched Movie Tracker (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A small project to keep track of and review all of the movies I have watched.</p>
+                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
+                </div>
+            </div>
+            <div class="ExpCard">
+                <h3>Booked (In-Progress)</h3>
+                <div class="pictureContainer">PHOTO Placeholder</div>
+                <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
+                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
                 </div>
             </div>
         </div>
@@ -401,11 +412,11 @@
         let expedu = true; //True:hide experience and show edu, False:hide edu and show exp
         const experienceElements = document.getElementsByClassName("ExperienceItemContainer");
         const educationElements = document.getElementsByClassName("EducationItemContainer");
+        let tabElements = document.getElementsByClassName("Tab");
 
         function toggleExpEdu() {
             expedu = !expedu;
             //TODO: Replace with show/hide experience/education logic
-            let logString = "";
             if (expedu) {
                 for (i = 0; i < experienceElements.length; i++) {
                     experienceElements[i].style.visibility = "hidden";
@@ -414,23 +425,26 @@
                 for (i = 0; i < educationElements.length; i++) {
                     educationElements[i].style.visibility = "visible";
                     educationElements[i].style.display = "inherit";
-
                 }
-                logString = "Experience";
+
+                tabElements[0].style.backgroundColor = "#000000";
+                tabElements[1].style.backgroundColor = "#ffffff";
+                tabElements[0].style.color = "#ffffff";
+                tabElements[1].style.color = "#000000";
             } else {
-                logString = "Education";
                 for (i = 0; i < experienceElements.length; i++) {
                     experienceElements[i].style.visibility = "visible";
                     experienceElements[i].style.display = "inherit";
-
                 }
                 for (i = 0; i < educationElements.length; i++) {
                     educationElements[i].style.visibility = "hidden";
                     educationElements[i].style.display = "none";
-
                 }
+                tabElements[1].style.backgroundColor = "#000000";
+                tabElements[0].style.backgroundColor = "#ffffff";
+                tabElements[1].style.color = "#ffffff";
+                tabElements[0].style.color = "#000000";
             }
-            console.log("You toggled Experience/Education.  You are viewing: " + logString);
         }
     </script>
 </body>
