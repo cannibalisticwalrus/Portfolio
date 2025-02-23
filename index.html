@@ -191,6 +191,7 @@
             display: flex;
             flex-direction: row;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .ExpPText {
@@ -239,6 +240,7 @@
             color: var(--primaryColor);
             padding: .25rem 1rem .25rem 1rem;
             border-radius: 5px;
+            width: fit-content;
         }
 
         .ExperienceItemContainer{
@@ -265,7 +267,7 @@
     </div>
     <div class="Section">
         <div class="AboutTextContainer">
-            <h1 class="aboutHeaderText">Hi, I am <span style="color:var(--lightAccent1)">Stephen Jackiw</span></h1>
+            <h1 class="aboutHeaderText">Hi, I'm <span style="color:var(--lightAccent1)">Stephen Jackiw</span></h1>
             <div class="aboutTextContainerBody">
                 <p class="aboutBodyText">Hi. I am a software engineer based out of Philadelphia, USA.
                 </p>
@@ -381,28 +383,42 @@
                 <div class="pictureContainer">PHOTO Placeholder</div>
                 <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
                 </p>
-                <div>Tech Used: GDScript, Game Dev, Godot, C#
+                <div class="TechUsedContainer">Tech Used:
+                    <div class="TechItem"> GDScript</div>
+                    <div class="TechItem"> Godot</div>
+                    <div class="TechItem"> Blender </div>
                 </div>
             </div>
             <div class="ExpCard">
                 <h3>The Polaroid Project (In-Progress)</h3>
                 <div class="pictureContainer">PHOTO Placeholder</div>
                 <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
-                <div>Tech Used: Typescript, React, Python, AWS Lamda
+                <div class="TechUsedContainer">Tech Used:
+                    <div class="TechItem"> Typescript</div>
+                    <div class="TechItem"> React</div>
+                    <div class="TechItem"> Python</div>
+                    <div class="TechItem"> AWS Lambda</div>
                 </div>
             </div>
             <div class="ExpCard">
                 <h3>Watched Movie Tracker (In-Progress)</h3>
                 <div class="pictureContainer">PHOTO Placeholder</div>
                 <p>A small project to keep track of and review all of the movies I have watched.</p>
-                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
+                <div class="TechUsedContainer">Tech Used:
+                    <div class="TechItem"> Javascript/Typescript</div>
+                    <div class="TechItem"> AWS RDBS</div>
+                    <div class="TechItem"> Python</div>
+                    <div class="TechItem"> AWS Lambda</div>
                 </div>
             </div>
             <div class="ExpCard">
                 <h3>Booked (In-Progress)</h3>
                 <div class="pictureContainer">PHOTO Placeholder</div>
                 <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
-                <div>Tech Used: Typescript, React Native, ExpressJS/NodeJS
+                <div class="TechUsedContainer">Tech Used:
+                    <div class="TechItem"> Typescript</div>
+                    <div class="TechItem"> React Native</div>
+                    <div class="TechItem"> ExpressJS/NodeJS</div>
                 </div>
             </div>
         </div>
