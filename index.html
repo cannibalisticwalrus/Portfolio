@@ -5,14 +5,15 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <style>
-        :root{
-            --primaryColor:#ffffff;
-            --primaryBgColor:#000000;
+        :root {
+            --primaryColor: #ffffff;
+            --primaryBgColor: #000000;
             --lightAccent1: #ce1212;
             --darkAccent1: #181818;
             --lightAccent2: #ce1212;
             --darkAccent2: #181818;
         }
+
         body {
             background-color: var(--primaryBgColor);
             color: var(--primaryColor);
@@ -146,29 +147,53 @@
             overflow: auto;
         }
 
+        .ExpSectionContainer {
+            display: flex;
+            flex-direction: column;
+        }
+
         .ExpCardContainer {
             margin-top: 4rem;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             gap: 4rem;
         }
 
         .ExpCard {
-            padding: 1.5rem;
-            padding-top: .5rem;
-            border-radius: 25px;
-            border-width: 2px;
-            border-color: var(--lightAccent1);
-            border-style: solid;
+            display: grid;
+            width: 256px;
+            height: 256px;
         }
 
         .ExpCard .pictureContainer {
-            width: 256px;
-            height: 256px;
-            border-width: 2px;
-            border-color: var(--lightAccent1);
+            grid-column-start: 1;
+            grid-row-start: 1;
+            position: relative;
+        }
+
+        .ExpCard .picture {
+            border-radius: 20px;
+            border-color: var(--primaryBgColor);
             border-style: solid;
-            margin-bottom: 2.5rem;
+        }
+
+        .ExpCard .ExpCard-Title {
+            z-index: 2;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            visibility: hidden;
+            padding-top: 192px;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: #181818aa;
+            border-radius: 20px;
+            border-color: var(--primaryBgColor);
+            border-style: solid;
+        }
+
+        .ExpCard:hover .ExpCard-Title {
+            visibility: visible;
         }
 
         .aboutTextContainerBody {
@@ -235,7 +260,8 @@
             height: 4rem;
             width: 50%;
         }
-        .TechItem{
+
+        .TechItem {
             background-color: var(--lightAccent1);
             color: var(--primaryColor);
             padding: .25rem 1rem .25rem 1rem;
@@ -243,7 +269,7 @@
             width: fit-content;
         }
 
-        .ExperienceItemContainer{
+        .ExperienceItemContainer {
             padding-bottom: 3rem;
         }
     </style>
@@ -367,137 +393,176 @@
                     <h3>Purdue University</h3>
                     <p>– BS, Cybersecurity – Graduated Honors – GPA 3.7</p>
                     <h3>Certifications</h3>
-                     <ul>
+                    <ul>
                         <li>AWS Developer Associate</li>
                         <li>CompTIA Security+</li>
                         <li>AWS Cloud Practitioner</li>
-                     </ul>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="Section">
-        <div class="ExpCardContainer">
-            <div class="ExpCard">
-                <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
-                </p>
-                <div class="TechUsedContainer">Tech Used:
-                    <div class="TechItem"> GDScript</div>
-                    <div class="TechItem"> Godot</div>
-                    <div class="TechItem"> Blender </div>
+        <div class="ExpSectionContainer">
+            <h1>Selected Projects</h1>
+            <div class="ExpCardContainer">
+                <div class="ExpCard" onclick="dispalyProjectDetails()">
+                    <div class="pictureContainer">
+                        <img src="img/Project01.png" style="width:256px;height:256px;" class="picture">
+                    </div>
+                    <div class="ExpCard-Title">Is it okay to be scared of the dark?</div>
                 </div>
-            </div>
-            <div class="ExpCard">
-                <h3>The Polaroid Project (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
-                <div class="TechUsedContainer">Tech Used:
-                    <div class="TechItem"> Typescript</div>
-                    <div class="TechItem"> React</div>
-                    <div class="TechItem"> Python</div>
-                    <div class="TechItem"> AWS Lambda</div>
+                <div class="ExpCard">
+                    <div class="pictureContainer"></div>
+                    <div class="ExpCard-Title">Is it okay to be scared of the dark? (In-Progress)</div>
                 </div>
-            </div>
-            <div class="ExpCard">
-                <h3>Watched Movie Tracker (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A small project to keep track of and review all of the movies I have watched.</p>
-                <div class="TechUsedContainer">Tech Used:
-                    <div class="TechItem"> Javascript/Typescript</div>
-                    <div class="TechItem"> AWS RDBS</div>
-                    <div class="TechItem"> Python</div>
-                    <div class="TechItem"> AWS Lambda</div>
+                <!-- <div class="ExpCard">
+                    <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
+                    </p>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem"> GDScript</div>
+                        <div class="TechItem"> Godot</div>
+                        <div class="TechItem"> Blender </div>
+                    </div>
                 </div>
-            </div>
-            <div class="ExpCard">
-                <h3>Booked (In-Progress)</h3>
-                <div class="pictureContainer">PHOTO Placeholder</div>
-                <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
-                <div class="TechUsedContainer">Tech Used:
-                    <div class="TechItem"> Typescript</div>
-                    <div class="TechItem"> React Native</div>
-                    <div class="TechItem"> ExpressJS/NodeJS</div>
+                <div class="ExpCard">
+                    <h3>The Polaroid Project (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem"> Typescript</div>
+                        <div class="TechItem"> React</div>
+                        <div class="TechItem"> Python</div>
+                        <div class="TechItem"> AWS Lambda</div>
+                    </div>
                 </div>
+                <div class="ExpCard">
+                    <h3>Watched Movie Tracker (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A small project to keep track of and review all of the movies I have watched.</p>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem"> Javascript/Typescript</div>
+                        <div class="TechItem"> AWS RDBS</div>
+                        <div class="TechItem"> Python</div>
+                        <div class="TechItem"> AWS Lambda</div>
+                    </div>
+                </div>
+                <div class="ExpCard">
+                    <h3>Booked (In-Progress)</h3>
+                    <div class="pictureContainer">PHOTO Placeholder</div>
+                    <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem"> Typescript</div>
+                        <div class="TechItem"> React Native</div>
+                        <div class="TechItem"> ExpressJS/NodeJS</div>
+                    </div>
+                </div> -->
             </div>
         </div>
+
     </div>
     <div class="Section">
         <div class="ContactMe">
             <h1>Want to work with me?</h1>
             <p>Interested in hiring me full time? You can find my resume here.</p>
-            <button type="button">Download Resume</button>
-            <p>Or you can drop me a message if you just want to chat</p>
-            <textarea></textarea>
+            <button type="button" class="downloadResumeButton">Download Resume</button>
+            <p>Or you can drop me a message through one of the below platforms if you just want to chat</p>
+            <div class="socials" style="align-self: center;">
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewbox="0, 0 24, 24" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M 6 2 C 4.9057453 2 4 2.9057453 4 4 L 4 20 C 4 21.094255 4.9057453 22 6 22 L 18 22 C 19.094255 22 20 21.094255 20 20 L 20 8 L 14 2 L 6 2 z M 6 4 L 13 4 L 13 9 L 18 9 L 18 20 L 6 20 L 6 4 z M 8 12 L 8 14 L 16 14 L 16 12 L 8 12 z M 8 16 L 8 18 L 16 18 L 16 16 L 8 16 z">
+
+                        </path>
+                    </svg>
+                </div>
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="socialLinkContainer">
+                    <svg class="socialLink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="h-6 w-6" aria-hidden="true">
+                        <path
+                            d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
         </div>
-
-    </div>
-    <script>
-        class Theme {
-            constructor(primaryColor,primaryBgColor,lightAccentOne,darkAccentOne){
-                this.primaryColor = primaryColor;
-                this.primaryBgColor = primaryBgColor;
-                this.lightAccentOne = lightAccentOne;
-                this.darkAccentOne = darkAccentOne;
-                this.aboutPhotoPath = "aboutPhotoPath";
+        <script>
+            class Theme {
+                constructor(primaryColor, primaryBgColor, lightAccentOne, darkAccentOne) {
+                    this.primaryColor = primaryColor;
+                    this.primaryBgColor = primaryBgColor;
+                    this.lightAccentOne = lightAccentOne;
+                    this.darkAccentOne = darkAccentOne;
+                    this.aboutPhotoPath = "aboutPhotoPath";
+                }
             }
-        }
 
-        const firstTheme = new Theme("#ffffff", "#000000", "#ce1212", "#181818");
-        const secondTheme = new Theme("#66473C", "#FFF5D9", "#FFD952", "#40644A");
-        const thirdTheme = new Theme("#2B2D42", "#8D99AE", "#E1D89F", "#27398A");
-        const themeList = [firstTheme, secondTheme, thirdTheme];
-        var currentTheme = 0;
+            const firstTheme = new Theme("#ffffff", "#000000", "#ce1212", "#181818");
+            const secondTheme = new Theme("#66473C", "#FFF5D9", "#FFD952", "#4d6353");
+            const thirdTheme = new Theme("#2B2D42", "#8D99AE", "#E1D89F", "#27398A");
+            const themeList = [firstTheme, secondTheme, thirdTheme];
+            var currentTheme = 0;
 
-        function changeTheme() {
-            currentTheme = (themeList.length-1>currentTheme)?currentTheme+1:0;
-            console.log("Theme Change Requested: "+themeList.length);
-            document.documentElement.style.setProperty("--primaryBgColor", themeList[currentTheme].primaryBgColor);
-            document.documentElement.style.setProperty("--primaryColor", themeList[currentTheme].primaryColor);
-            document.documentElement.style.setProperty("--lightAccent1", themeList[currentTheme].lightAccentOne);
-            document.documentElement.style.setProperty("--darkAccent1", themeList[currentTheme].darkAccentOne);
-        }
-
-        let expedu = true; //True:hide experience and show edu, False:hide edu and show exp
-        const experienceElements = document.getElementsByClassName("ExperienceItemContainer");
-        const educationElements = document.getElementsByClassName("EducationItemContainer");
-        let tabElements = document.getElementsByClassName("Tab");
-        toggleExpEdu();
-
-        function toggleExpEdu() {
-            expedu = !expedu;
-            //TODO: Replace with show/hide experience/education logic
-            if (expedu) {
-                for (i = 0; i < experienceElements.length; i++) {
-                    experienceElements[i].style.visibility = "hidden";
-                    experienceElements[i].style.display = "none";
-                }
-                for (i = 0; i < educationElements.length; i++) {
-                    educationElements[i].style.visibility = "visible";
-                    educationElements[i].style.display = "inherit";
-                }
-
-                tabElements[0].style.backgroundColor = "var(--primaryBgColor)";
-                tabElements[1].style.backgroundColor = "var(--primaryColor)";
-                tabElements[0].style.color = "var(--primaryColor)";
-                tabElements[1].style.color = "var(--primaryBgColor)";
-            } else {
-                for (i = 0; i < experienceElements.length; i++) {
-                    experienceElements[i].style.visibility = "visible";
-                    experienceElements[i].style.display = "inherit";
-                }
-                for (i = 0; i < educationElements.length; i++) {
-                    educationElements[i].style.visibility = "hidden";
-                    educationElements[i].style.display = "none";
-                }
-                tabElements[1].style.backgroundColor = "var(--primaryBgColor)";
-                tabElements[0].style.backgroundColor = "var(--primaryColor)";
-                tabElements[1].style.color = "var(--primaryColor)";
-                tabElements[0].style.color = "var(--primaryBgColor)";
+            function changeTheme() {
+                currentTheme = (themeList.length - 1 > currentTheme) ? currentTheme + 1 : 0;
+                console.log("Theme Change Requested: " + themeList.length);
+                document.documentElement.style.setProperty("--primaryBgColor", themeList[currentTheme].primaryBgColor);
+                document.documentElement.style.setProperty("--primaryColor", themeList[currentTheme].primaryColor);
+                document.documentElement.style.setProperty("--lightAccent1", themeList[currentTheme].lightAccentOne);
+                document.documentElement.style.setProperty("--darkAccent1", themeList[currentTheme].darkAccentOne);
             }
-        }
-    </script>
+
+            let expedu = true; //True:hide experience and show edu, False:hide edu and show exp
+            const experienceElements = document.getElementsByClassName("ExperienceItemContainer");
+            const educationElements = document.getElementsByClassName("EducationItemContainer");
+            let tabElements = document.getElementsByClassName("Tab");
+            toggleExpEdu();
+
+            function toggleExpEdu() {
+                expedu = !expedu;
+                //TODO: Replace with show/hide experience/education logic
+                if (expedu) {
+                    for (i = 0; i < experienceElements.length; i++) {
+                        experienceElements[i].style.visibility = "hidden";
+                        experienceElements[i].style.display = "none";
+                    }
+                    for (i = 0; i < educationElements.length; i++) {
+                        educationElements[i].style.visibility = "visible";
+                        educationElements[i].style.display = "inherit";
+                    }
+
+                    tabElements[0].style.backgroundColor = "var(--primaryBgColor)";
+                    tabElements[1].style.backgroundColor = "var(--primaryColor)";
+                    tabElements[0].style.color = "var(--primaryColor)";
+                    tabElements[1].style.color = "var(--primaryBgColor)";
+                } else {
+                    for (i = 0; i < experienceElements.length; i++) {
+                        experienceElements[i].style.visibility = "visible";
+                        experienceElements[i].style.display = "inherit";
+                    }
+                    for (i = 0; i < educationElements.length; i++) {
+                        educationElements[i].style.visibility = "hidden";
+                        educationElements[i].style.display = "none";
+                    }
+                    tabElements[1].style.backgroundColor = "var(--primaryBgColor)";
+                    tabElements[0].style.backgroundColor = "var(--primaryColor)";
+                    tabElements[1].style.color = "var(--primaryColor)";
+                    tabElements[0].style.color = "var(--primaryBgColor)";
+                }
+            }
+        </script>
 </body>
 
 
