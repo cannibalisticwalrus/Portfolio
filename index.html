@@ -75,11 +75,11 @@
             animation: float 3s ease infinite;
         }
 
-        .circleText{
+        .circleText {
             visibility: hidden;
         }
 
-        .centerCircle:hover .circleText{
+        .centerCircle:hover .circleText {
             visibility: visible;
         }
 
@@ -282,25 +282,81 @@
             padding-bottom: 3rem;
         }
 
-        .downloadResumeButton{
+        .downloadResumeButton {
             background-color: var(--primaryBgColor);
             border-style: solid;
             color: var(--primaryColor);
             border-color: var(--primaryColor);
             border-radius: 10px;
-            width:10rem;
-            height:3rem;
+            width: 10rem;
+            height: 3rem;
         }
 
-        .downloadResumeButton:hover{
+        .downloadResumeButton:hover {
             background-color: var(--darkAccent1);
             border-color: var(--lightAccent1);
             color: var(--lightAccent1);
         }
+
+        .Modal {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid red;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: #18181840;
+        }
+
+        .ModalContent {
+            background-color: var(--darkAccent1);
+            align-items: center;
+            justify-content: center;
+            width: clamp(325px, 50%, 650px);
+            box-shadow: #000000;
+            border-radius: 25px;
+        }
+
+        .ModalHeader{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
     </style>
 </head>
 
 <body class="parent">
+    <div class="Modal">
+        <div class="ModalContent">
+            <div class="ModalHeader">
+                <div class="ModalHeaderText">
+                    <div id="title">Title</div>
+                    <div id="projectLink">Link To Site</div>
+                    <div id="projectTech">Technologies</div>
+                    <div class="TechUsedContainer">Tech Used:
+                        <div class="TechItem">GDScript</div>
+                        <div class="TechItem">Godot</div>
+                        <div class="TechItem">Blender</div>
+                    </div>
+                    <p id="description">
+                        Vestibulum bibendum mi non dapibus aliquet. Praesent vestibulum sem sit amet est dapibus ullamcorper id
+                        vitae lacus. Aliquam eget facilisis urna. Pellentesque sit amet felis ligula. Morbi eget nisl in odio
+                        mattis ornare. Curabitur ac augue leo. Etiam vitae justo quis lorem tristique posuere. Nulla faucibus,
+                        libero nec fermentum lobortis, magna arcu eleifend magna, quis lobortis tortor ex venenatis eros.
+                    </p>
+                </div>
+                <div class="ModalHeaderPicture">
+                        <img src="img/Project01.png" style="width:256px;height:256px;" class="picture">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="Hero">
         <div class="heroCenterCollection">
             <h1>Stephen Jackiw</h1>
@@ -431,67 +487,24 @@
         <div class="ExpSectionContainer">
             <h1>Selected Projects</h1>
             <div class="ExpCardContainer">
-                <div class="ExpCard" onclick="dispalyProjectDetails()">
+                <div class="ExpCard" onclick="displayProjectDetails1()">
                     <div class="pictureContainer">
                         <img src="img/Project01.png" style="width:256px;height:256px;" class="picture">
                     </div>
                     <div class="ExpCard-Title">Is it okay to be scared of the dark?</div>
                 </div>
-                <div class="ExpCard">
+                <div class="ExpCard" onclick="displayProjectDetails2()">
                     <div class="pictureContainer">
                         <img src="img/Project02.png" style="width:256px;height:256px;" class="picture">
                     </div>
                     <div class="ExpCard-Title">The Polaroid Project</div>
                 </div>
-                <div class="ExpCard">
+                <div class="ExpCard" onclick="displayProjectDetails3()">
                     <div class="pictureContainer">
                         <img src="img/Project03.png" style="width:256px;height:256px;" class="picture">
                     </div>
                     <div class="ExpCard-Title">[Unnamed Project]</div>
                 </div>
-                <!-- <div class="ExpCard">
-                    <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A push-block puzzle game where you try to escape from the darkness before it claims you forever
-                    </p>
-                    <div class="TechUsedContainer">Tech Used:
-                        <div class="TechItem"> GDScript</div>
-                        <div class="TechItem"> Godot</div>
-                        <div class="TechItem"> Blender </div>
-                    </div>
-                </div>
-                <div class="ExpCard">
-                    <h3>The Polaroid Project (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A collection of roughly 100+ watercolor paintings which were then distored using code.</p>
-                    <div class="TechUsedContainer">Tech Used:
-                        <div class="TechItem"> Typescript</div>
-                        <div class="TechItem"> React</div>
-                        <div class="TechItem"> Python</div>
-                        <div class="TechItem"> AWS Lambda</div>
-                    </div>
-                </div>
-                <div class="ExpCard">
-                    <h3>Watched Movie Tracker (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A small project to keep track of and review all of the movies I have watched.</p>
-                    <div class="TechUsedContainer">Tech Used:
-                        <div class="TechItem"> Javascript/Typescript</div>
-                        <div class="TechItem"> AWS RDBS</div>
-                        <div class="TechItem"> Python</div>
-                        <div class="TechItem"> AWS Lambda</div>
-                    </div>
-                </div>
-                <div class="ExpCard">
-                    <h3>Booked (In-Progress)</h3>
-                    <div class="pictureContainer">PHOTO Placeholder</div>
-                    <p>A mobile app for indie musicians and small business owners to connect and book gigs.</p>
-                    <div class="TechUsedContainer">Tech Used:
-                        <div class="TechItem"> Typescript</div>
-                        <div class="TechItem"> React Native</div>
-                        <div class="TechItem"> ExpressJS/NodeJS</div>
-                    </div>
-                </div> -->
             </div>
         </div>
 
@@ -500,7 +513,8 @@
         <div class="ContactMe">
             <h1>Want to work with me?</h1>
             <p>Interested in hiring me full time? You can find my resume here.</p>
-            <a href="downloads/Resume.pdf" download="StephenJackiw_Resume.pdf" target="_blank" style="padding-bottom: 2rem;">
+            <a href="downloads/Resume.pdf" download="StephenJackiw_Resume.pdf" target="_blank"
+                style="padding-bottom: 2rem;">
                 <button type="button" class="downloadResumeButton">Download Resume</button>
 
             </a>
@@ -548,6 +562,21 @@
             const firstTheme = new Theme("#ffffff", "#000000", "#ce1212", "#181818");
             const secondTheme = new Theme("#66473C", "#FFF5D9", "#FFD952", "#4d6353");
             const thirdTheme = new Theme("#2B2D42", "#8D99AE", "#E1D89F", "#27398A");
+
+            class Project {
+                constructor(title, description, projLink, photoPath, projectTechList) {
+                    this.title = title;
+                    this.description = description;
+                    this.projLink = projLink;
+                    this.photoPath = photoPath;
+                    this.projectTechList = projectTechList;
+                }
+            }
+
+            const gdProject = new Project("Is it okay to be scared of the dark?", "A short sokoban-style puzzle game about lost remembering the moments", "itch.io link", "/img/Project01.png", []);
+            const reactProject = new Project("The Polaroid Project", "An art project where 100+ watercolor paintings are procedurally modified using various alogrithms.  Theses are then displayed to the user with the ability to buy a copy for themselves.", "Link Temporarily Unavailable", "/img/Project02.png", ["React", "Python", "AWS Lambda"]);
+            const mobileProject = new Project("[Unrelease Project]", "A mobile app that connects small-businesses and indie musicians for events and gigs in the Chicagoland area", "Link Unavailable", "/img/Project03.png", ["React Native", "ExpressJS", "AWS Dynamo DB"]);
+
             const themeList = [firstTheme, secondTheme, thirdTheme];
             var currentTheme = 0;
 
@@ -596,6 +625,30 @@
                     tabElements[0].style.backgroundColor = "var(--primaryColor)";
                     tabElements[1].style.color = "var(--primaryColor)";
                     tabElements[0].style.color = "var(--primaryBgColor)";
+                }
+            }
+
+            var modal = document.getElementsByClassName("Modal")[0];
+            function displayProjectDetails(){
+                modal.style.display="flex";
+            }
+            
+            function displayProjectDetails1(){
+                var titleElement = document.getElementById("")
+                displayProjectDetails();
+            }
+
+            function displayProjectDetails2(){
+                displayProjectDetails();
+            }
+
+            function displayProjectDetails3(){
+                displayProjectDetails();
+            }
+
+            window.onclick=function() {
+                if(event.target == modal) {
+                    modal.style.display = "none";
                 }
             }
         </script>
