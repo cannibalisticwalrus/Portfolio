@@ -19,6 +19,8 @@
             color: var(--primaryColor);
         }
 
+
+
         .socials {
             /*            position: fixed;
 */
@@ -71,6 +73,14 @@
             height: 100px;
             width: 100px;
             animation: float 3s ease infinite;
+        }
+
+        .circleText{
+            visibility: hidden;
+        }
+
+        .centerCircle:hover .circleText{
+            visibility: visible;
         }
 
         @keyframes float {
@@ -179,6 +189,7 @@
         }
 
         .ExpCard .ExpCard-Title {
+            color: var(--lightAccent1);
             z-index: 2;
             grid-column-start: 1;
             grid-row-start: 1;
@@ -188,8 +199,6 @@
             padding-right: 10%;
             background-color: #181818aa;
             border-radius: 20px;
-            border-color: var(--primaryBgColor);
-            border-style: solid;
         }
 
         .ExpCard:hover .ExpCard-Title {
@@ -272,6 +281,22 @@
         .ExperienceItemContainer {
             padding-bottom: 3rem;
         }
+
+        .downloadResumeButton{
+            background-color: var(--primaryBgColor);
+            border-style: solid;
+            color: var(--primaryColor);
+            border-color: var(--primaryColor);
+            border-radius: 10px;
+            width:10rem;
+            height:3rem;
+        }
+
+        .downloadResumeButton:hover{
+            background-color: var(--darkAccent1);
+            border-color: var(--lightAccent1);
+            color: var(--lightAccent1);
+        }
     </style>
 </head>
 
@@ -281,7 +306,7 @@
             <h1>Stephen Jackiw</h1>
             <div onclick="changeTheme()" class="circleContainer">
                 <div class="centerCircle">
-                    <p>Click me!</p>
+                    <p class="circleText">Click me!</p>
                 </div>
             </div>
             <h2>Web Developer</h2>
@@ -413,8 +438,16 @@
                     <div class="ExpCard-Title">Is it okay to be scared of the dark?</div>
                 </div>
                 <div class="ExpCard">
-                    <div class="pictureContainer"></div>
-                    <div class="ExpCard-Title">Is it okay to be scared of the dark? (In-Progress)</div>
+                    <div class="pictureContainer">
+                        <img src="img/Project02.png" style="width:256px;height:256px;" class="picture">
+                    </div>
+                    <div class="ExpCard-Title">The Polaroid Project</div>
+                </div>
+                <div class="ExpCard">
+                    <div class="pictureContainer">
+                        <img src="img/Project03.png" style="width:256px;height:256px;" class="picture">
+                    </div>
+                    <div class="ExpCard-Title">[Unnamed Project]</div>
                 </div>
                 <!-- <div class="ExpCard">
                     <h3>Is it okay to be scared of the dark? (In-Progress)</h3>
@@ -467,7 +500,10 @@
         <div class="ContactMe">
             <h1>Want to work with me?</h1>
             <p>Interested in hiring me full time? You can find my resume here.</p>
-            <button type="button" class="downloadResumeButton">Download Resume</button>
+            <a href="downloads/Resume.pdf" download="StephenJackiw_Resume.pdf" target="_blank" style="padding-bottom: 2rem;">
+                <button type="button" class="downloadResumeButton">Download Resume</button>
+
+            </a>
             <p>Or you can drop me a message through one of the below platforms if you just want to chat</p>
             <div class="socials" style="align-self: center;">
                 <div class="socialLinkContainer">
